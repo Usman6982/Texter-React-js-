@@ -26,7 +26,7 @@ export default function Textform(props) {
     props.showAlert("Extra Spaces Removed!", "success");
   };
 
-  
+
 
   const handleEmailExtractClick = () => {
     const emailRegex = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/g;
@@ -77,7 +77,7 @@ export default function Textform(props) {
         <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
           Copy Text
         </button>
-       
+
         <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>
           Remove Extra Spaces
         </button>
