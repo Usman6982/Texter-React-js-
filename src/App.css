@@ -39,3 +39,122 @@
 .blank{
   color: red;
 }
+/* Styling the footer */
+footer {
+  background-color: #333; /* Background color of the footer */
+  color: #fff; /* Text color in the footer */
+  padding: 20px 0; /* Padding at the top and bottom */
+}
+
+.footer-container {
+  max-width: 1200px; /* Set the maximum width of the footer content */
+  margin: 0 auto; /* Center the content horizontally */
+  display: flex;
+  justify-content: space-between; /* Align content evenly in a row */
+  align-items: center; /* Center vertically */
+}
+
+.footer-logo img {
+  max-width: 100px; /* Set the maximum width for the logo image */
+  height: auto; /* Maintain the aspect ratio of the logo */
+}
+
+.footer-links ul {
+  list-style: none; /* Remove bullet points from the list */
+  padding: 0; /* Remove default padding */
+  display: flex;
+}
+
+.footer-links li {
+  margin-right: 20px; /* Space between list items */
+}
+
+.footer-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* Link color in the footer */
+  font-weight: bold; /* Make links bold */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.footer-links a:hover {
+  color: #ff5733; /* Change color on hover */
+}
+
+.footer-contact p {
+  margin: 0; /* Remove default margin for paragraphs */
+}
+
+.footer-contact a {
+  color: #ff5733; /* Contact link color */
+  text-decoration: none; /* Remove underline from the email link */
+}
+
+/* Copyright text at the bottom of the footer */
+.copyright {
+  text-align: center; /* Center-align the copyright text */
+  margin-top: 20px; /* Space between content and copyright text */
+}
+/* Styling for the Contact section */
+.contact-us {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.contact-us h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-us p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.contact-us a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.contact-us a:hover {
+  text-decoration: underline;
+}
+.profile-image {
+  width: 200px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+}
+
+/* Styling for the Privacy Policy section */
+.privacy-policy {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top:130px;
+  margin-bottom:100px;
+  
+}
+
+.privacy-policy h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom:15px;
+}
+
+.privacy-policy p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.privacy-policy a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+}
+
+.privacy-policy a:hover {
+  text-decoration: underline;
+}
+

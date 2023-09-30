@@ -26,11 +26,7 @@ export default function Textform(props) {
     props.showAlert("Extra Spaces Removed!", "success");
   };
 
-  const handleClearClick = () => {
-    let newText = '';
-    setText(newText);
-    props.showAlert("Text Cleared!", "success");
-  };
+  
 
   const handleEmailExtractClick = () => {
     const emailRegex = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/g;
@@ -47,6 +43,12 @@ export default function Textform(props) {
 
   const handleOnChange = (event) => {
     setText(event.target.value);
+  };
+
+  const handleClearClick = () => {
+    let newText = '';
+    setText(newText);
+    props.showAlert("Text Cleared!", "success");
   };
 
   return (
@@ -66,25 +68,28 @@ export default function Textform(props) {
           ></textarea>
         </div>
 
-        <button className="btn btn-primary mx-1" onClick={handleUpClick}>
-          Convert to Uppercase
+        <button className="btn btn-primary mx-2 my-2" onClick={handleUpClick}>
+          Uppercase
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleLoClick}>
-          Convert to Lowercase
+        <button className="btn btn-primary mx-2 my-2" onClick={handleLoClick}>
+          Lowercase
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleCopy}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-1" onClick={handleClearClick}>
-          Clear Text
-        </button>
-        <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>
+       
+        <button className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>
           Remove Extra Spaces
         </button>
 
-        <button className="btn btn-primary mx-1" onClick={handleEmailExtractClick}>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleEmailExtractClick}>
           Extract Emails
         </button>
+
+        <button className="btn btn-primary mx-2 my-2" onClick={handleClearClick}>
+          Clear Text
+        </button>
+
       </div>
 
       <div className="container my-3" style={{ color: props.mode === 'dark' ? 'white' : '#042743' }}>

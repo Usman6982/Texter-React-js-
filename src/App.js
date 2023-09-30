@@ -1,17 +1,17 @@
-// import from './logo.svg';
-
 import './App.css';
 import About from './components/About';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
 import React, { useState } from 'react';  
 import Alert from './components/alert';
+import Footer from './components/Footer';
+import Contact from './components/Contact';
+import PrivacyPolicy from './components/PrivacyPolicy';
 import {Route,Routes} from "react-router-dom";
 
 
 function App() {
 
-  
   const [mode, setMode] = useState('light');//whether dark mode is enabled or not
   const [ alert, setAlert] = useState(null);
   const showAlert = (message,type)=>{
@@ -33,13 +33,7 @@ function App() {
     document.body.style.backgroundColor = '#042743';
     showAlert("Dark mode has been enabled","success")
     document.title = 'TextUtils - Dark Mode';
-    // setInterval(() => {
-    //   document.title = 'TextUtils is amazing Mode';
-      
-    // }, 2000);
-    // setInterval(() => {
-    //   document.title = 'Install TextUtils Now';
-    // }, 1500);
+    
     }
     else{
       setMode('light');
@@ -52,7 +46,7 @@ function App() {
 
   return (  
    <>
-   <Navbar title="Textutils" aboutText="About" mode={mode} toggleMode={toggleMode}/>
+   <Navbar title="TextUtils" aboutText="About" cont="Contact Us" pp="Privacy Policy" mode={mode} toggleMode={toggleMode}/>
    <Alert alert={alert}/>
    <div className="container my-3">
 
@@ -61,31 +55,14 @@ function App() {
    <Route path='/' element={<Textform showAlert={showAlert} heading="Enter the text to analyze " mode={mode}/>}/>
 
     <Route path='/about' element={<About/>}/>
-    
-    
-    
-   </Routes>
+    <Route path='/Contact' element={<Contact/>}/>
+    <Route path='/PrivacyPolicy' element={<PrivacyPolicy/>}/>
+    </Routes>
    </div>
-   {/* <Router>
-  <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} aboutText="Aboutus"/>
-  <Alert alert={alert}/>
-  <div className="container my-3">
+   <Footer ></Footer>
 
-         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-<Textform showAlert={showAlert} heading="Enter the text to analyze " mode={mode}/>
-          </Route>
-        </Switch>
-   </div>
-   </Router>
-parent componet */}
    </>
-
-    
-  );
+ );
 }
 
 export default App;
