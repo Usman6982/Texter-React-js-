@@ -25,7 +25,7 @@ export default function About() {
     }
     return (
         <div className='container' style={myStyle}>
-            <h1 className='my-3'>About TextUtils App</h1>
+            <h1 className='my-3'>About Texter App</h1>
             <p>Welcome to the Text utilize App – your go-to tool for quickly analyzing and manipulating text data. Whether you're a writer, student, or simply someone who works with text regularly, this app is designed to make your tasks easier and more efficient. <b>"Although the Search Button and Search Placeholder are elegantly designed in this app, they do not currently function as intended."</b> </p>
             <h3 className='my-4'><b>Key Features:</b></h3>
             <div>
